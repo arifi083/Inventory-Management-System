@@ -78,7 +78,7 @@ export const routes = [
 
 
      //category routes
-     { path: '/store-category', component: storecategory, name:'store-category'},
+     { path: '/store-category', component: storecategory, name:'store-category'}, 
      { path: '/category', component: category, name:'category'},
      { path: '/edit-category/:id', component: editcategory, name:'edit-category'},
 
