@@ -33,14 +33,14 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></router-link>
       </li>
-      <!--
+   
       <li class="nav-item bg-info">
         <router-link class="nav-link" to="/pos">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>POS</span></router-link>
       </li>
 
-     -->
+    
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
@@ -89,7 +89,7 @@
       </li>
 
     
-    <!--  
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap3"
           aria-expanded="true" aria-controls="collapseBootstrap3">
@@ -119,9 +119,9 @@
         </div>
       </li>
 
-    -->
 
-     <!--  
+
+  
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap44"
           aria-expanded="true" aria-controls="collapseBootstrap44">
@@ -151,8 +151,7 @@
         </div>
       </li>
      
-      -->
-       <!--  
+     
        
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap51"
@@ -190,7 +189,7 @@
         </div>
       </li>
       
-    --> 
+ 
       
      
       <hr class="sidebar-divider">

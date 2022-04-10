@@ -46,3 +46,11 @@ Route::Post('/orderdone', 'Api\PosController@OrderDone');
 Route::Get('/orders', 'Api\OrderController@TodayOrder');
 Route::Get('/order/details/{id}', 'Api\OrderController@OrderDetails');
 Route::Get('/order/orderdetails/{id}', 'Api\OrderController@OrderDetailsAll');
+Route::Post('/search/order', 'Api\PosController@SearchOrderDate');
+
+
+Route::Get('/today/sell','Api\PosController@TodaySell');
+Route::Get('/today/income','Api\PosController@TodayIncome');
+Route::Get('/today/due','Api\PosController@TodayDue');
+Route::Get('/today/expense','Api\PosController@TodayExpense');
+Route::Get('/today/stockout','Api\PosController@StockOut');

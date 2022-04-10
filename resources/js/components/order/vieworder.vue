@@ -71,24 +71,6 @@
                 <div class="card-footer"></div>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
 
 
