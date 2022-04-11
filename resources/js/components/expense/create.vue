@@ -66,7 +66,7 @@ export default{
   data(){
      return{
        form:{
-         details:'',
+         details:'', 
          amount:''
        },
        errors:[]

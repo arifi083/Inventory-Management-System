@@ -14,29 +14,35 @@
               <div class="col-lg-12">
                 <div class="login-form">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Search Order</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Search Order Month Wise</h1>
                   </div>
 
-        <form class="user" @submit.prevent="searchDate">
+        <form class="user" @submit.prevent="searchMonth">
 
 
              <div class="form-group">
+                  <h5>Select Month<span class="text-danger">*</span></h5>
+                  <div class="controls">
+                       <select v-model="month" class="form-control">
+			              <option label="Choose Month"></option>
+			              <option value="January">January</option>
+			              <option value="February">February</option>
+			              <option value="March">March</option>
+			              <option value="April">April</option>
+			              <option value="May">May</option>
+			              <option value="June">June</option>
+			              <option value="July">July</option>
+			              <option value="August">August</option>
+			              <option value="September">September</option>
+			              <option value="October">October</option>
+			             <option value="November">November</option>
+			             <option value="December">December</option>
 
-          <div class="form-row">
-            <div class="col-md-6">
-                 <label for="exampleFormControlTextarea1"><b>Start Date </b></label>
-      <input type="date" class="form-control" id="exampleInputFirstName" required="" v-model="form.start_date">
-            </div>
+		          </select>  
 
-
-     <div class="col-md-6">
-            <label for="exampleFormControlTextarea1"><b>End Date</b></label>
-      <input type="date" class="form-control" id="exampleInputFirstName" required="" v-model="form.end_date">
-      
-     </div>     
-            
-          </div>
-        </div>
+                  </div>
+         
+             </div>
 
 
            <div class="form-group">
@@ -117,18 +123,15 @@ export default{
 
   data(){
      return{
-       form:{
-          start_date:'',
-          end_date:''
-       },
-       orders:{}
-     }
+        month:'',
+        orders:{}
+      }
    },
    methods:{
      
-     searchDate(){
-
-       axios.post('/api/search/order/',this.form)
+     searchMonth(){
+       var data = {month:this.month}
+       axios.post('/api/search/order/month',data)
         .then(({data}) => (this.orders = data))
         .catch(error =>this.errors = error.response.data.errors)
      },

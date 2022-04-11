@@ -26,6 +26,11 @@ let storeproduct  = require('./components/product/create.vue').default;
 let product  = require('./components/product/index.vue').default;
 let editproduct   = require('./components/product/edit.vue').default;
 
+//purchase component
+let storepurchase  = require('./components/purchase/create.vue').default;
+let purchase  = require('./components/purchase/index.vue').default;
+let editpurchase   = require('./components/purchase/edit.vue').default;
+
 
 //expense component
 let storeexpense  = require('./components/expense/create.vue').default;
@@ -58,6 +63,8 @@ let pos  = require('./components/pos/pos.vue').default;
 let order = require('./components/order/order.vue').default;
 let vieworder = require('./components/order/vieworder.vue').default;
 let searchorder = require('./components/order/search.vue').default;
+let monthwiseorder = require('./components/order/month.vue').default;
+let yearwiseorder = require('./components/order/year.vue').default;
 
 
 
@@ -89,6 +96,13 @@ export const routes = [
      { path: '/product', component: product, name:'product'},
      { path: '/edit-product/:id', component: editproduct, name:'edit-product'},
 
+
+      //purchase routes
+      { path: '/store-purchase', component: storepurchase, name:'store-purchase'},
+      { path: '/purchase', component: purchase, name:'purchase'},
+      { path: '/edit-purchase/:id', component: editpurchase, name:'edit-purchase'},
+ 
+
      //expense routes
      { path: '/store-expense', component: storeexpense, name:'store-expense'},
      { path: '/expense', component: expense, name:'expense'},
@@ -118,6 +132,8 @@ export const routes = [
      { path: '/order', component: order, name:'order'},
      { path: '/view-order/:id', component: vieworder, name:'view-order'},
      { path: '/searchorder', component: searchorder, name:'searchorder'},
+     { path: '/monthwiseorder', component: monthwiseorder, name:'monthwiseorder'},
+     { path: '/yearwiseorder', component: yearwiseorder, name:'yearwiseorder'},
     
   
   ]

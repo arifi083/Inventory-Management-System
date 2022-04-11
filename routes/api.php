@@ -24,6 +24,7 @@ Route::apiResource('/category', 'Api\CategoryController');
 Route::apiResource('/product', 'Api\ProductController');
 Route::apiResource('/expense', 'Api\ExpenseController');
 Route::apiResource('/customer', 'Api\CustomerController');
+Route::apiResource('/purchase', 'Api\PurchaseController');
 
 Route::Post('/salary/insert/{id}', 'Api\SaleryController@saleryInsert');
 Route::Get('/salary', 'Api\SaleryController@allSalery');
@@ -47,6 +48,8 @@ Route::Get('/orders', 'Api\OrderController@TodayOrder');
 Route::Get('/order/details/{id}', 'Api\OrderController@OrderDetails');
 Route::Get('/order/orderdetails/{id}', 'Api\OrderController@OrderDetailsAll');
 Route::Post('/search/order', 'Api\PosController@SearchOrderDate');
+Route::Post('/search/order/month', 'Api\PosController@SearchOrderMonth');
+Route::Post('/search/order/year', 'Api\PosController@SearchOrderYear');
 
 
 Route::Get('/today/sell','Api\PosController@TodaySell');

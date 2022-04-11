@@ -100,7 +100,7 @@
               <!-- Simple Tables -->
               <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Stock List</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Stock Out Product List</h6>
                 </div>
                 <div class="table-responsive">
                   <table class="table align-items-center table-flush">

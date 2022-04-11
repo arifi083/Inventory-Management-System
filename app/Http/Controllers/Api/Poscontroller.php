@@ -57,15 +57,22 @@ class Poscontroller extends Controller
 
    }
 
-   public function SearchOrderDate(Request $request){
-    $orderdate = $request->date;
-    $newdate = new DateTime($orderdate);
-    $done = $newdate->format('d/m/Y'); 
+   public function SearchOrderDate(Request $request){ 
+    $order_start = $request->start_date;
+    $order_end = $request->end_date;
+
+    $order_date_start = new DateTime($order_start);
+    $start_done = $order_date_start->format('d/m/Y'); 
+
+    $order_date_end = new DateTime($order_end);
+    $start_end = $order_date_end->format('d/m/Y'); 
 
     $order = DB::table('orders')
             ->join('customers','orders.customer_id','customers.id')
             ->select('customers.name','orders.*')
-            ->where('orders.order_date',$done)
+            //->whereBetween('orders.order_date',[$start_done, $start_end])
+            ->whereDate('orders.order_date',$start_done)
+            ->whereDate('orders.order_date',$start_end)
             ->get();
     return response()->json($order);
 
@@ -103,5 +110,32 @@ class Poscontroller extends Controller
        $product = DB::table('products')->where('product_quantity','<','1')->get();
        return response()->json($product);
    }
+
+
+   public function SearchOrderMonth(Request $request){
+       $month = $request->month;
+      $order = DB::table('orders')
+        ->join('customers','orders.customer_id','customers.id')
+        ->select('customers.name','orders.*')
+         ->where('orders.order_month',$month)
+        ->get();
+        return response()->json($order);
+     
+    }
+
+
+    public function SearchOrderYear(Request $request){
+        $year = $request->year;
+       $order = DB::table('orders')
+         ->join('customers','orders.customer_id','customers.id')
+         ->select('customers.name','orders.*')
+          ->where('orders.order_year',$year)
+         ->get();
+         return response()->json($order);
+      
+     }
+
+
+
  
 }

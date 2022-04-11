@@ -21,7 +21,7 @@ class ProductController extends Controller
         ->join('categories','products.category_id','categories.id')
         ->join('suppliers','products.supplier_id','suppliers.id')
         ->select('products.*','categories.category_name','suppliers.name')
-        ->orderBy('products.id','DESC')
+        ->orderBy('products.id','DESC') 
         ->get();
         return response()->json($product);
     }

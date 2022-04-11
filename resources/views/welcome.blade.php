@@ -104,6 +104,20 @@
         </div>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap77"
+          aria-expanded="true" aria-controls="collapseBootstrap77">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Purrchase</span>
+        </a>
+        <div id="collapseBootstrap77" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+        <router-link class="collapse-item" to="/store-purchase">Add Purchase</router-link>
+        <router-link class="collapse-item" to="/purchase">All Purchase</router-link>
+          </div>
+        </div>
+      </li>
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap4"
@@ -163,7 +177,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
            
    <router-link class="collapse-item" to="/order">Today Order</router-link>
-   <router-link class="collapse-item" to="/searchorder">Search</router-link>
+   <router-link class="collapse-item" to="/searchorder">Date Wise Order</router-link>
+   <router-link class="collapse-item" to="/monthwiseorder">Month Wise Order</router-link>
+   <router-link class="collapse-item" to="/yearwiseorder">Year Wise Order</router-link>
             
           </div>
         </div>
